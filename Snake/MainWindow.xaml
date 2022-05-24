@@ -1,0 +1,39 @@
+﻿<Window x:Class="Snake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800" KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="235"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.RowSpan="7" Grid.Column="1">
+            <Canvas x:Name="snakeCanvas" Height="400" Width="500" Grid.Row="1" Grid.RowSpan="7" Grid.Column="1"></Canvas>
+        </Border>
+
+        <Button x:Name="logOnButton" Content="Login" Grid.Row="1" Grid.Column="3" Click="logOnButton_Click"/>
+        <Button x:Name="startGameButton" Content="Start Game" Grid.Row="3" Grid.Column="3" Click="startGameButton_Click"/>
+        <Button x:Name="settingsButton" Content="Settings" Grid.Row="5" Grid.Column="3" Click="settingsButton_Click"/>
+
+        <DataGrid x:Name="scoreDataGrid" Grid.Row="7" Grid.Column="3" IsEnabled="False"/>
+    </Grid>
+</Window>
